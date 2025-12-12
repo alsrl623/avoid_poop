@@ -32,7 +32,7 @@
    py -m pip install pygame==2.6.1
    py -m pip install opencv-python==4.12.0.88
    py -m pip install numpy==2.2.6
-   pandas==2.3.3
+   py -m pip install pandas==2.3.3
    ```
    *오류 발생 시 경로 확인! (압축 풀며 폴더가 중복되진 않았는지)*
 
@@ -63,4 +63,5 @@
 
 3. 게임 창이 뜨면 플레이를 시작하면 됩니다.
 4. 게임 종료시 닉네임, 얻은 점수와 레벨이 표시됩니다.
+
 
