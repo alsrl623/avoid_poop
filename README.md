@@ -10,11 +10,6 @@
 
 - **Python 3.x (⚠️ Python 3.14 미만 권장)**  
   *pygame이 Python 3.14에서는 안정적으로 설치되지 않을 수 있습니다.*
-- 필요 모듈
-  - pygame
-  - opencv-python
-  - numpy
-  - pandas
 ---
 
 ## 2. 설치 방법
@@ -23,7 +18,10 @@
 2. 프로젝트 폴더에서 아래 명령으로 필요한 모듈을 설치합니다.
 
    ```bash
-   py -m pip install -r requirements.txt
+   py -m pip install pygame==2.6.1
+   py -m pip install opencv-python==4.12.0.88
+   py -m pip install numpy==2.2.6
+   py -m pip install pandas==2.3.3
    ```
 
 ---
@@ -53,4 +51,5 @@
 
 3. 게임 창이 뜨면 플레이를 시작하면 됩니다.
 4. 게임 종료시 닉네임, 얻은 점수와 레벨이 표시됩니다.
+
 
