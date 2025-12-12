@@ -205,7 +205,7 @@ class Score_screen:
         btn2_img = pygame.image.load("assets/300x100.png")
         self.main_bg = pygame.image.load("assets/main_background.png")
         self.button1 = Button(btn1_img, (250,500), '게임 재시작', Yeongdo_Bold(60), "#000000", "#585858")
-        self.button2 = Button(btn2_img, (650,500), '게임 종료', Yeongdo_Bold(60), "#000000", "#585858")
+        self.button2 = Button(btn2_img, (650,500), '메인화면', Yeongdo_Bold(60), "#000000", "#585858")
         self.btn_list = [self.button1, self.button2]
 
     def update(self, screen, mouse_pos):
@@ -227,9 +227,8 @@ class Score_screen:
             if self.button1.check_button_click(mouse_pos): # 재시작 버튼 -> 동일 프로필로 게임 재시작
                 user_profile = Profile(self.username, self.char_img, gamelevel)
                 current_screen = Game(user_profile, screen, self.char_img)
-            elif self.button2.check_button_click(mouse_pos): # 게임 종료 버튼 -> 게임 및 창 종료
-                pygame.quit()
-                sys.exit()
+            elif self.button2.check_button_click(mouse_pos): # 메인화면 버튼 -> 메인화면으로 이동
+                current_screen = Main_Screen()
 
 
 if __name__ == '__main__': # import 시 실행 방지
@@ -256,3 +255,4 @@ if __name__ == '__main__': # import 시 실행 방지
         if isinstance(current_screen, Game) and current_screen.game_over:
             result = current_screen.get_result()
             current_screen = Score_screen(result, current_screen.char_img)
+
